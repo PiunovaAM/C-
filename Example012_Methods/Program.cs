@@ -81,7 +81,7 @@ for (int i = 2; i <= 10; i++)
 //маленькие буквы "к" заменить большими "К",
 //а большие буквы "С" заменить маленькими "с"
 
-
+/*
 string text = "- Я думаю, - сказал князь, улыбаясь, - что, "
             + "ежели бы вас послали вместо нашего милого Винценгероде,"
             + "вы бы взяли приступом согласие прусского короля."
@@ -109,3 +109,42 @@ Console.WriteLine();
 
 newText = Replace(newText, 'к', 'К');
 Console.WriteLine(newText);
+*/
+
+// Сортировка массива (от min до max)
+/*
+int[] arr = {1, 5, 4, 3, 2, 6, 7, 1, 1}; //завели массив 
+
+void PrintArray(int[] array) // ввели невозратный метод
+{
+    int count = array.Length;
+
+    for (int i = 0; i < count; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+    Console.WriteLine(); //выводим пустую строку
+}
+
+void SelectionSort(int[] array)
+{
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        int minPosition = i;
+
+        for (int j = i + 1; j < array.Length; j++)
+        {
+            if(array[j] < array[minPosition]) minPosition = j;
+        }
+
+        int temporary = array[i];
+        array[i] = array[minPosition];
+        array[minPosition] = temporary; // 138-140 меняем найденную цифру с самой минимальной местами
+    }
+}
+
+PrintArray(arr);
+SelectionSort(arr);
+
+PrintArray(arr);
+*/
